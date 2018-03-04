@@ -1,28 +1,96 @@
-.App {
-  text-align: center;
+#root > section {
+  min-height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.hidden-input {
+  display: none;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.field {
+  max-width: 310px;
 }
 
-.App-title {
-  font-size: 1.5em;
+li {
+  display: inline-flex;
 }
 
-.App-intro {
-  font-size: large;
+.active-page .button.is-white {
+  background-color: #00d1b2 !important;
+  border-color: transparent !important;
+  color: #fff !important;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.box.paginator-wrap {
+  padding: 0.5em;
+}
+
+.paginator {
+  position: relative;
+  display: flex;
+}
+
+.paginator .previous,
+.paginator .next {
+  flex: 1;
+}
+
+.paginator .next {
+  justify-content: flex-end;
+}
+
+.paginator .break {
+  align-self: center;
+}
+
+.paginator.is-loading:before {
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute !important;
+  background-color: white;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.paginator.is-loading:after {
+  -webkit-animation: spinAround 500ms infinite linear;
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid #4a4a4a;
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+  position: absolute;
+  left: calc(50% - (1em / 2));
+  top: calc(50% - (1em / 2));
+  position: absolute !important;
+  z-index: 2;
+}
+
+.card {
+  margin: 1em 0;
+}
+
+.card:first-child,
+.card:last-child {
+  margin: 0;
+}
+
+.card .card-content {
+  padding: 0;
+}
+
+.flight-action {
+  color: #3273dc !important;
+}
+
+.flight-action:hover {
+  color: #363636 !important;
 }
