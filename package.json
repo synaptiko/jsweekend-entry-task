@@ -7,9 +7,9 @@
     "flatpickr": "^4.3.2",
     "moment": "^2.21.0",
     "react": "^16.2.0",
+    "react-addons-create-fragment": "^15.6.2",
     "react-dom": "^16.2.0",
     "react-flatpickr": "^3.6.4",
-    "react-paginate": "^5.1.0",
     "react-scripts": "1.1.1"
   },
   "scripts": {

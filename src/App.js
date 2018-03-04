@@ -136,31 +136,27 @@ class App extends Component {
 
   render() {
     return (
-      <section className="hero is-primary is-bold">
-        <div className="hero-body">
-        <div className="container">
-          <div className="tile is-ancestor">
-            <div className="tile is-4 is-parent">
-              <div className="tile is-child search-form-wrap">
-                <h1 className="title">Search for a flight!</h1>
-                <SearchForm
-                  {...this.state.searchForm}
-                  onFromChange={this.onFromChange}
-                  onToChange={this.onToChange}
-                  onDatesChange={this.onDatesChange}
-                  onSearch={this.onSearch}
-                />
-              </div>
+      <div className="container">
+        <div className="tile is-ancestor">
+          <div className="tile is-4 is-parent">
+            <div className="tile is-child search-form-wrap">
+              <h1 className="title">Search for a flight!</h1>
+              <SearchForm
+                {...this.state.searchForm}
+                onFromChange={this.onFromChange}
+                onToChange={this.onToChange}
+                onDatesChange={this.onDatesChange}
+                onSearch={this.onSearch}
+              />
             </div>
-            { this.state.flights.length > 0 && <Results
-              pagination={this.state.pagination}
-              flights={this.state.flights}
-              onPageChange={this.onPageChange}
-            />}
           </div>
+          { this.state.flights.length > 0 && <Results
+            pagination={this.state.pagination}
+            flights={this.state.flights}
+            onPageChange={this.onPageChange}
+          />}
         </div>
-        </div>
-      </section>
+      </div>
     );
   }
 }
